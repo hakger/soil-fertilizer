@@ -1,9 +1,10 @@
 <?php
 
 namespace Sageextras\Nav;
+
 /**
  * Restore the Roots 8.1.1 Bootstrap Navwalker for a cleaner Bootstrap menu
- *  
+ *
  * * Walker_Nav_Menu (WordPress default) example output:
  *   <li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8"><a href="/">Home</a></li>
  *   <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="/sample-page/">Sample Page</a></l
@@ -13,14 +14,15 @@ namespace Sageextras\Nav;
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
  */
 class NavWalker extends \Walker_Nav_Menu {
+
   private $cpt; // Boolean, is current post a custom post type
   private $archive; // Stores the archive page for current URL
 
   public function __construct() {
     add_filter('nav_menu_css_class', array($this, 'cssClasses'), 10, 2);
     add_filter('nav_menu_item_id', '__return_null');
-    $cpt           = get_post_type();
-    $this->cpt     = in_array($cpt, get_post_types(array('_builtin' => false)));
+    $cpt = get_post_type();
+    $this->cpt = in_array($cpt, get_post_types(array('_builtin' => false)));
     $this->archive = get_post_type_archive_link($cpt);
   }
 
@@ -71,6 +73,7 @@ class NavWalker extends \Walker_Nav_Menu {
 
     parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
   }
+
   // @codingStandardsIgnoreEnd
 
   public function cssClasses($classes, $item) {
@@ -149,12 +152,12 @@ function root_relative_url($input) {
 function url_compare($url, $rel) {
   $url = trailingslashit($url);
   $rel = trailingslashit($rel);
-  if ((strcasecmp($url, $rel) === 0) || root_relative_url($url) == $rel) { 
-    return true; 
+  if ((strcasecmp($url, $rel) === 0) || root_relative_url($url) == $rel) {
+    return true;
   } else {
     return false;
   }
 }
 
-add_filter('wp_nav_menu_args', __NAMESPACE__ .'\\nav_menu_args');
+add_filter('wp_nav_menu_args', __NAMESPACE__ . '\\nav_menu_args');
 add_filter('nav_menu_item_id', '__return_null');

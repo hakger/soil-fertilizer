@@ -57,8 +57,10 @@ phpcs --standard=ruleset.xml --extensions=php -n -s .
 * Use short array syntax
 * Use short echo syntax
 
+(A big thanks to everyone who has contributed thusfar, especially [johnny-bit](https://github.com/johnny-bit), who has done a lot of work cleaning up the code and bringing it up to par for standards!)
+
 ## ToDo
 
 - NavWalker uses code from Sage release 8.1.1. Looking forward to modularizing utils it uses.
 - Gallery is now namespaced, looking forward to modularizing any utils it uses.
- 
+
