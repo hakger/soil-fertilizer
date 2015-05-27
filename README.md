@@ -29,6 +29,10 @@ works properly.
 
   `add_theme_support('sf-gallery');`
 
+This module __CAN__ be replaced by 12 lines of less/sass and filtering default
+gallery style, as shown by [Ben Word](https://github.com/retlehs) in
+[this PR - sage#1421](https://github.com/roots/sage/pull/1421).
+
 ## Support
 
 Please feel free to open an
