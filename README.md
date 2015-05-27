@@ -59,11 +59,13 @@ If You use [Arcanist](http://phabricator.org/applications/arcanist/), there's
 
 ### Additonal code rules
 
-* Use `Hakger\SolFertilizer\` namespace
+* Use `Hakger\SoilFertilizer\` namespace
 * Use short array syntax
 * Use short echo syntax
 
+
 ## Contributors
+
 
  - [Hubert Kowalski](https://github.com/johnny-bit) - Refactoring Sagextras and
 starting Soil-Fertilizer
