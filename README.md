@@ -33,6 +33,21 @@ This module __CAN__ be replaced by 12 lines of less/sass and filtering default
 gallery style, as shown by [Ben Word](https://github.com/retlehs) in
 [this PR - sage#1421](https://github.com/roots/sage/pull/1421).
 
+* **Google Analytics with support for multiple trackers**
+
+  `add_theme_support('sf-google-analytics', 'UA-XXXXX-Y');`
+
+If You wish to set multiple trackers, simply use as follows:
+
+  `add_theme_support('sf-google-analytics', 'UA-XXXXX-Y', 'wp_footer', ['Tracker1' => 'UA-XXXXX-X',   'Tracker2' => 'UA-XXXXX-Z', ... ]);`
+
+This module follows same tactics as Soil Google analytics
+([more info here](https://github.com/roots/soil/wiki/Google-Analytics)).
+
+For info on multiple trackers see [Working with Multiple Tracking Objects](https://developers.google.com/analytics/devguides/collection/analyticsjs/advanced#multipletrackers)
+
+
+
 ## Support
 
 Please feel free to open an
