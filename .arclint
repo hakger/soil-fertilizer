@@ -23,19 +23,41 @@
         "(^less/lato-webfont.less$)"
       ]
     },
+    "merge-conflict": {
+      "type": "merge-conflict"
+    },
+    "php": {
+      "type": "php",
+      "include": [
+        "(\\.php$)"
+      ]
+    },
+    "php-cs": {
+      "type": "phpcs",
+      "phpcs.standard": "ruleset.xml",
+      "flags" : [
+        "-n",
+        "-s"
+      ],
+      "include": [
+        "(\\.php$)"
+      ]
+    },
     "spelling": {
       "type": "spelling"
     },
     "text": {
       "type": "text",
-      "exclude" : [
-        "(^css/)",
-        "(\\.scss$)",
-        "(\\.less$)"
-      ],
       "severity": {
+        "3": "disabled",
         "5": "disabled"
       }
+    },
+    "xml": {
+      "type": "xml",
+      "include": [
+        "(\\.xml$)"
+      ]
     }
   }
 }

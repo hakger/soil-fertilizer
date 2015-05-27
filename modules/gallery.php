@@ -1,6 +1,6 @@
 <?php
 
-namespace Sagextras\Gallery;
+namespace Hakger\SoilFertilizer\Gallery;
 
 /**
  * Restore the Roots Bootstrap Gallery code for a gallery that's Bootstrap friendly.
@@ -117,7 +117,7 @@ function gallery($attr) {
   return $output;
 }
 
-if (current_theme_supports('se-gallery')) {
+if (current_theme_supports('sf-gallery')) {
   remove_shortcode('gallery');
   add_shortcode('gallery', __NAMESPACE__ . '\\gallery');
   add_filter('use_default_gallery_style', '__return_null');

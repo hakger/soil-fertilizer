@@ -1,24 +1,38 @@
 {
-  "name": "storm2k/sagextras",
+  "name": "hakger/soil-fertilizer",
   "type": "wordpress-plugin",
   "license": "MIT",
-  "description": "A WordPress plugin to restore some Bootstrap specific functionality to the Sage theme.",
-  "homepage": "https://github.com/storm2k/sagextras",
+  "description": "A WordPress plugin enhancing Soil experience",
+  "homepage": "https://github.com/hakger/soil-fertilizer",
   "authors": [
+    {
+      "name": "Hubert Kowalski",
+      "email": "h.kowalski@hakger.pl",
+      "homepage": "https://github.com/johnny-bit",
+      "role": "Main Developer"
+    },
     {
       "name": "Michael Romero",
       "email": "romero@dimensionsixdesign.com",
-      "homepage": "https://github.com/storm2k"
+      "homepage": "https://github.com/storm2k",
+      "role": "Sagextras Developer"
     }
   ],
   "keywords": [
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/storm2k/sagextras/issues"
+    "issues": "https://github.com/hakger/soil-fertilizer/issues"
   },
   "require": {
     "php": ">=5.4.0",
     "composer/installers": "~1.0"
+  },
+  "replace": {
+    "storm2k/sagextras": "1.*"
+  },
+  "suggest": {
+    "roots/soil": "Soil-Fertilizer brings some Bootstrap-specifics and some additional features. It does not intend to replace Soil",
+    "wpackagist-plugin/font-awesome-4-menus": "If You intend to use NavWalker, this is great for adding font-awesome"
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sagextras\Nav;
+namespace Hakger\SoilFertilizer\Nav;
 
 /**
  * Restore the Roots 8.1.1 Bootstrap Navwalker for a cleaner Bootstrap menu
@@ -9,7 +9,7 @@ namespace Sagextras\Nav;
  *   <li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8"><a href="/">Home</a></li>
  *   <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="/sample-page/">Sample Page</a></l
  *
- * Sagextras/Nav/NavWalker example output:
+ * Hakger\SoilFertilizer\Nav\NavWalker example output:
  *   <li class="menu-home"><a href="/">Home</a></li>
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
  */
@@ -120,9 +120,9 @@ function nav_menu_args($args = '') {
   }
 
   if (!$args['walker']) {
-    $sagextras_nav_menu_args['walker'] = new NavWalker();
+    $nav_menu_args['walker'] = new NavWalker();
   }
-  return array_merge($args, $sagextras_nav_menu_args);
+  return array_merge($args, $nav_menu_args);
 }
 
 /**
