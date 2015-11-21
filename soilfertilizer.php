@@ -58,7 +58,7 @@ function load_modules() {
     $feature = 'sf-' . basename($file, '.php');
     $se_feature = 'se-' . basename($file, '.php');
     $soil_feature = 'soil-' . basename($file, '.php');
-    if (isset($_wp_theme_features[$feature]) || isset($_wp_theme_features[$se_feature] )) {
+    if (isset($_wp_theme_features[$feature]) || isset($_wp_theme_features[$se_feature])) {
 
       if (isset($_wp_theme_features[$soil_feature])) {
         unset($_wp_theme_features[$soil_feature]);
@@ -74,4 +74,4 @@ function load_modules() {
   }
 }
 
-add_action('after_setup_theme', __NAMESPACE__ . '\\load_modules');
+add_action('after_setup_theme', __NAMESPACE__ . '\\load_modules', 100);
