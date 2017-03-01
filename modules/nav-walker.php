@@ -65,7 +65,11 @@ class NavWalker extends \Walker_Nav_Menu {
       }
     }
 
-    $element->is_active = strpos($this->archive, $element->url);
+    if ($element->url !== '') {
+      $element->is_active = strpos($this->archive, $element->url);
+    } else {
+      $element->is_active = false;
+    }
 
     if ($element->is_active) {
       $element->classes[] = 'active';
